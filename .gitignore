@@ -1,0 +1,3 @@
+# Ignora tudo dentro de ACC
+src/collection_100/ACC/
+output/

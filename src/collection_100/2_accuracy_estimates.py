@@ -494,6 +494,8 @@ def classification_report_shinny(df, level, class_names, class_values, region, y
     # Calculate total accuracies and disagreements.
     user_acc_tot = np.sum(user_acc * total_row)
     prod_acc_tot = np.sum(prod_acc * total_col)
+    user_se_tot = np.sum(user_se * total_row)
+    prod_se_tot = np.sum(prod_se * total_col)
     quantity_dis = np.absolute(total_row - total_col)
     allocation_dis = 2 * np.minimum((total_row - np.diagonal(matrix)), (total_col - np.diagonal(matrix)))
     quantity_dis_tot = np.sum(quantity_dis) / 2
